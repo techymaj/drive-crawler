@@ -1,5 +1,7 @@
 import os
+from color_codes import *
 
 directory = "/media/kali/256"
-for file in os.listdir(directory):
-    print(f"In drive: {directory}/ {file}")
+for dir_list in os.listdir(directory):
+    if os.path.isdir(f"{directory}/{dir_list}"):
+        print_ic(f"In drive: {directory}/ {dir_list}")
