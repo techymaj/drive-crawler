@@ -11,4 +11,4 @@ path = "/media/kali/256"
 
 with os.scandir(path) as entries:
     for entry in entries:
-        print(entry)
+        print(entry.path)
