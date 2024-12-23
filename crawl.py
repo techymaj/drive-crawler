@@ -11,7 +11,7 @@ for dirpath, dirnames, filenames in os.walk(f"{directory}"):
     print_ic(f"\tSubdirectories: {dirnames}", CYAN)
     print(f"\t\tFiles: {filenames}")
 
-    paths = dict.fromkeys(dirnames)
+    paths = dict.fromkeys(dirnames, filenames)
     tree.update(paths)
 
 
