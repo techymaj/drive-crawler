@@ -10,5 +10,7 @@ path = "/media/kali/256"
 #             print(f"Files: {filenames}")
 
 with os.scandir(path) as entries:
-    for name, path in entries:
-        print(name, path)
+    for entry in entries:
+        print(f"Name: {entry.name}")
+        print(f"Path: {entry.path}")
+        print("-" * 80)
