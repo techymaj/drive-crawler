@@ -10,5 +10,5 @@ path = "/media/kali/256"
 #             print(f"Files: {filenames}")
 
 with os.scandir(path) as entries:
-    for entry in entries:
-        print(entry.path)
+    for name, path in entries:
+        print(name, path)
