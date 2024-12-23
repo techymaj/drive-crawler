@@ -10,5 +10,5 @@ for dirpath, dirnames, filenames in os.walk(f"{directory}"):
     print(f"\t\tFiles: {filenames}")
     with open(log_crawl, "a") as drive:
         drive.write(f"\nCurrent Directory: {dirpath}")
-        drive.write(f"\tSubdirectories: {dirnames}")
-        drive.write(f"\t\tFiles: {filenames}")
+        drive.write(f"\n\tSubdirectories: {dirnames}")
+        drive.write(f"\n\t\tFiles: {filenames}")
