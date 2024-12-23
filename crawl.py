@@ -11,9 +11,13 @@ for dirpath, dirnames, filenames in os.walk(f"{directory}"):
     print_ic(f"\tSubdirectories: {dirnames}", CYAN)
     print(f"\t\tFiles: {filenames}")
 
-    paths = dict.fromkeys(dirnames, filenames)
-    tree.update(paths)
-
+    tree.update(
+        {
+            dirpath : {
+                directory: filenames for directory in dirnames
+            }
+        }
+    )
 
     with open(log_crawl, "a") as drive:
         drive.write(f"\nCurrent Directory: {dirpath}")
