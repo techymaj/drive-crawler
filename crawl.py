@@ -1,7 +1,7 @@
 import os
 from color_codes import *
 
-directory = "/media/kali/256"
+directory = "/media/kali/"
 
 for dirpath, dirnames, filenames in os.walk(f"{directory}"):
     print_ic(f"\nCurrent Directory: {dirpath}", RED, BOLD)
